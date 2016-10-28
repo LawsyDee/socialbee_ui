@@ -1,0 +1,15 @@
+
+.relationship {
+  stroke: #218CBA;
+  stroke-width: 2.5px;
+}
+
+.node {
+  fill: #ededed;
+  stroke: #218CBA;
+  stroke-width: 2px;
+}
+
+.node:hover {
+  fill: #237BA4;
+}

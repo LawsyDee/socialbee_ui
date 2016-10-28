@@ -1,0 +1,25 @@
+{
+  "name": "socialbee_ui",
+  "version": "0.0.1",
+  "description": "User Interface to display SocialBee data",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LawsyDee/socialbee_ui.git"
+  },
+  "keywords": [
+    "D3",
+    "visualization"
+  ],
+  "author": "Nathaniel Buechler (nbuechler@novetta.com)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/LawsyDee/socialbee_ui/issues"
+  },
+  "homepage": "https://github.com/LawsyDee/socialbee_ui#readme",
+  "dependencies": {
+    "d3": "^3.5.17"
+  }
+}
