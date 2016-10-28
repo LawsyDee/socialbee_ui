@@ -1,33 +1,95 @@
 <!DOCTYPE html>
 <html class="theme--light">
   <head>
-    <meta charset="UTF-8">
-    <title>title</title>
+  <meta charset="UTF-8">
+  <title>Novetta SocialBee</title>
   <link rel="stylesheet" href="css/application.min-6a6077ea922c7293ecc0a41eb3b4c918.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/main.css" type="text/css">
   </head>
   <body>
 
-    <div class="grid" style="height: 100vh">
-        <div class="grid__cell background--background-color-c padding--medium">
-          <div class="grid grid--horizontal-center">Here is some content too.</div>
-          <hr></hr>
-          <div class="form__field">
-              <label class="form__label">Username:</label>
-              <input class="form__control" type="text" placeholder="Type Here">
-          </div>
-          <div class="form__field">
-              <label class="form__label">Password:</label>
-              <input class="form__control" type="password" placeholder="Password">
-          </div>
+    <div class="grid" style="min-height: 100vh">
+        <div class="grid__cell grid__cell--3-of-4 grid--horizontal-center
+                    background--background-color-c">
+          <div class="flex flex--column">
+            <div class="background--background-color-a padding--medium">
+              <h1>SocialBee</h1>
+              <hr></hr>
+              <h3>Overview</h3>
+            </div>
+            <div class="padding--medium">
+              <span class="btn is-alert btn--block"
+                    style="float: right; width: 15%;">
+                Reset Graph
+              </span>
+            </div>
+            <div class="node_graph padding--medium" style="text-align: center;">
+              <!-- D3 Node Graph Goes here -->
+            </div>
+
+              <div class="background--background-color-c padding--medium">
+              <div class="background--background-color-a padding--medium
+                          border--primary-color">
+                <h3>Filter by Topic</h3>
+                <hr></hr>
+                <div class="grid">
+                  <div class="grid__cell padding--medium">
+                    <div class="form__field">
+                        <label>Choose a topic by number:</label>
+                        <input class="form__control" type="text" placeholder="i.e. 7"
+                               style="width: 40%; text-align: center;">
+                    </div>
+                  </div>
+                  <div class="grid__cell padding--medium">
+                    <span class="btn is-success btn--block">
+                      Start Filter
+                    </span>
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div> <!-- End flex-->
+        </div> <!-- End main grid-cell -->
+      	<div class="grid__cell grid__cell--1-of-4
+                    background--background-color-b
+                    border-left--primary-color">
           <div>
-            <span class="btn btn--block">btn btn--block</span>
+            <div class="split-header padding--medium background--background-color-a
+                        border-bottom--primary-color">
+              <h3>Topics</h3>
+            </div>
+            <div class="split-header padding--medium background--background-color-a">
+              <h3>Select a topic:</h3>
+            </div>
+            <div class="grid">
+              <div class="grid__cell padding--medium">
+                <div class="form__field">
+                    <label><h4>Topic #:</h4></label>
+                    <input class="form__control" type="text" placeholder="i.e. 7"
+                           style="width: 50%; text-align: center;">
+                </div>
+              </div>
+              <div class="grid__cell padding--medium">
+                <span class="btn is-success btn--block">
+                  Start Filter
+                </span>
+              </div>
+            </div>
+            <div class="split-header padding--medium background--background-color-a">
+              <h3>Most common words:</h3>
+            </div>
+            <div class="grid">
+              <div class="grid__cell padding--medium">
+                <h5>Select a topic first to see the most common words.</h5>
+              </div>
+            </div>
           </div>
-        </div>
-	<div class="grid__cell grid__cell--1-of-4 background--background-color-b padding--medium">[Topics]
-	</div>
+      	</div>
     </div>
 
   </body>
+
+  <script src="node_modules/d3/d3.min.js"></script>
+  <script src="js/node_graph.js"></script>
 </html>

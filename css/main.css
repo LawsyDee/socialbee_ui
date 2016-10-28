@@ -1,16 +1,15 @@
 
-.link {
-  stroke: #000;
-  stroke-width: 1.5px;
+.relationship {
+  stroke: #218CBA;
+  stroke-width: 2.5px;
 }
 
 .node {
-  cursor: move;
-  fill: #ccc;
-  stroke: #000;
-  stroke-width: 1.5px;
+  fill: #ededed;
+  stroke: #218CBA;
+  stroke-width: 2px;
 }
 
-.node.fixed {
-  fill: #f00;
+.node:hover {
+  fill: #237BA4;
 }
