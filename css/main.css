@@ -13,3 +13,32 @@
 .node:hover {
   fill: #237BA4;
 }
+
+/*
+The select field is not included currently in Novetta-Styles (10-31-2016)
+*/
+.theme--light select.form__control {
+  background-color: #218cba;
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 1px -1px 1px 1px #80a3b3,inset -1px 1px 1px 1px #237ba4;
+  box-sizing: border-box;
+  color: #9cdef6;
+  font-size: .75rem;
+  height: 36px;
+  outline: none;
+  padding: 5px 5px 5px 12px;
+}
+
+select.form__control {
+  background-color: #0e3b4e;
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 1px -1px 1px 1px #527a89,inset -1px 1px 1px 1px #0c2b39;
+  box-sizing: border-box;
+  color: #3dbfee;
+  font-size: .75rem;
+  height: 36px;
+  outline: none;
+  padding: 5px 5px 5px 12px;
+}
