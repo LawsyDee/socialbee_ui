@@ -1,0 +1,135 @@
+Oct 31, 2016
+
+GET localhost:5000/stats/
+Return Statistics JSON
+{
+  “node_count”: <number>,
+  “link_count”: <number>,
+  “topic_count”: <number>,
+  “degree”: <number>,
+  “density”: <number>,
+}
+
+GET /users/
+Returns List of User
+[
+Returns User
+{
+  “Id”: <number>,
+  “primary_name”: <string>,
+  “fname”: <string>,
+  “lname”: <string>,
+  “topic_list”: <list>, optional
+  “may_know_list”: <list of users ids>, optional
+  “message_list”: <list>, optional
+}
+]
+
+GET /users/topic/<id>
+Returns List of User for a given topic
+[
+Returns User
+{
+  “Id”: <number>,
+  “primary_name”: <string>,
+  “fname”: <string>,
+  “lname”: <string>,
+  “topic_list”: <list>, optional
+  “may_know_list”: <list of users ids>, optional
+  “message_list”: <list>, optional
+}
+]
+
+GET /users/topic/<id>,<id>
+Returns List of User for a given topic
+[
+Returns User
+{
+  “Id”: <number>,
+  “primary_name”: <string>,
+  “fname”: <string>,
+  “lname”: <string>,
+  “topic_list”: <list>, optional
+  “may_know_list”: <list of users ids>, optional
+  “message_list”: <list>, optional
+}
+]
+
+GET /users/<id>
+Returns User
+{
+  “Id”: <number>,
+  “primary_name”: <string>,
+  “fname”: <string>,
+  “lname”: <string>,
+  “topic_list”: <list>,
+  “may_know_list”: <list of users ids>,
+  “message_list”: <list>,
+}
+
+GET localhost:5000/links/
+Returns List of ‘Links’ b/t Users
+[
+{
+  “target”: <number>,
+  “source”: <number,
+}
+]
+
+GET /links/topic/<id>
+Returns List of ‘Links’ b/t Users by topic
+[
+{
+  “target”: <number>,
+  “source”: <number,
+}
+]
+
+
+GET /links/topics/
+Returns List of ‘Topics’
+[
+{
+  “Id”: <number>
+  “word_list”: <list>, #top 20 words
+}
+]
+
+GET localhost:5000/links/topics/<id>
+Returns a‘Topic’’
+# When the user navigates to this endpoint, the server creates this object
+# The server runs a cypher query and formats
+{
+  “Id”: <number>,
+  “word_list”: <list>, #top 20 words,
+  “top_3_emails_pairs:” <list_of_links>,
+  “node_count”: <number>,
+  “link_count”: <number>,
+  “degree”: <number>, # link_count / node_count
+  “density”: <number>, # link_count / ((link_count * link_count-1) / 2)
+}
+
+i..e.
+
+{
+  “Id”: 7,
+  “word_list”: [‘burger, ... , ‘king’],
+  “top_3_emails_pairs:” [
+{
+  				  “target”: <number>,
+  				  “source”: <number,
+},
+{
+  				  “target”: <number>,
+  				  “source”: <number,
+},
+{
+  				  “target”: <number>,
+  				  “source”: <number,
+},
+   			    ]
+  “node_count”: 459,
+  “link_count”: 603,
+  “degree”: <number>,
+  “density”: <number>,
+}
