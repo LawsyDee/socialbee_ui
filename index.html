@@ -14,15 +14,17 @@
                     background--background-color-c">
           <div class="flex flex--column">
             <div class="background--background-color-a padding--medium">
-              <img style="max-height: 50px; padding-top: 15px;" src="assets/NovettaSocialBee-logo.svg" alt="SocialBee"></img>
+              <img style="max-height: 75px; padding-top: 15px;" src="assets/NovettaSocialBee-logo.svg" alt="SocialBee"></img>
               <hr></hr>
               <h3 id="title">Overview</h3>
             </div>
             <div class="padding--medium">
-              <span class="resetFilterBtn btn is-alert btn--block"
-                    style="float: right; width: 15%;">
-                Reset Graph
-              </span>
+              <div class="line-height--medium margin-bottom--small">
+                <span class="resetFilterBtn btn is-alert"
+                      style="float: right;">
+                      Reset Graph
+                </span>
+              </div>
             </div>
             <div class="node_graph padding--medium" style="text-align: center;">
               <!-- D3 Node Graph Goes here -->
@@ -35,15 +37,19 @@
                 <hr></hr>
                 <div class="grid">
                   <div class="grid__cell padding--medium">
-                    <div class="form__field">
-                        <label>Choose a topic by number:</label>
-                        <select id="filterTopic" class="form__control topic-selection">
+                    <div class="form__group form__group--horizontal">
+                        <div class="form__field">
+                            <label class="form__label">Choose a topic by number:</label>
+                            <select id="filterTopic" class="form__control topic-selection"
+                                    style="text-align: center;">
 
-                        </select>
+                            </select>
+                        </div>
                     </div>
                   </div>
                   <div class="grid__cell padding--medium">
-                    <span class="startFilterBtn btn is-success btn--block">
+                    <span class="btn startFilterBtn"
+                          style="float: right;">
                       Start Filter
                     </span>
                   </div>
@@ -71,15 +77,19 @@
             </div>
             <div class="grid">
               <div class="grid__cell padding--medium">
-                <div class="form__field">
-                    <label><h4>Topic #:</h4></label>
-                    <select id="viewTopic" class="form__control topic-selection">
+                <div class="form__group form__group--horizontal">
+                    <div class="form__field">
+                        <label class="form__label" style="flex: 0 0 60px">Topic #:</label>
+                        <select id="viewTopic" class="form__control topic-selection"
+                                style="text-align: center;">
 
-                    </select>
+                        </select>
+                    </div>
                 </div>
               </div>
               <div class="grid__cell padding--medium">
-                <span class="btn is-success btn--block viewTopicBtn">
+                <span class="btn viewTopicBtn"
+                      style="float: right;">
                   View Topic
                 </span>
               </div>
